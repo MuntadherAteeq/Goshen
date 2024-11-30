@@ -8,7 +8,7 @@ New Tab extension
 
 ## Includes the following
 
-![Technologies ](https://skillicons.dev/icons?i=typescript,react,tailwind,webpack,jest)
+![Technologies ](https://skillicons.dev/icons?i=typescript,react,tailwind,jest,sass)
 
 ## Project Structure
 
