@@ -1,25 +1,20 @@
-# create-t3-extension
+# Goshen Extension
 
-Chrome Extension: React + TypeScript + TailWind CSS
+New Tab extension
 
 ## Prerequisites
 
-- [node + npm](https://nodejs.org/) (Current Version)
+- [node + npm](https://nodejs.org/) (latest Version)
 
 ## Includes the following
 
-- TypeScript
-- Webpack
-- React
-- Tailwind CSS
-- Jest
+![Technologies ](https://skillicons.dev/icons?i=typescript,react,tailwind,webpack,jest)
 
 ## Project Structure
 
 - src/typescript: TypeScript source files
 - src/assets: static files
 - dist: Chrome Extension directory
-- dist/js: Generated JavaScript files
 
 ## Setup
 
@@ -30,16 +25,15 @@ npm install
 ## Build
 
 ```
-npm run build
+npm run release
 ```
 
 ## Build in watch mode
 
 ```
-npm run watch
+npm run dev
 ```
 
-## References
-[https://github.com/chibat/chrome-extension-typescript-starter](https://github.com/chibat/chrome-extension-typescript-starter)
+## license
 
-[https://github.com/t3-oss/create-t3-app](https://github.com/t3-oss/create-t3-app)
+MIT license
