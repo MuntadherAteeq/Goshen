@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
+import "./index.css";
 
 const Options = () => {
   return <div className="text-red-400">Options page</div>;
