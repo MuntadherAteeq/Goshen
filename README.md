@@ -1,28 +1,29 @@
-## Usage
+# Goshen
 
-```bash
-$ npm install # or pnpm install or yarn install
+New Tab extension
+
+## Includes the following
+
+![Technologies ](https://skillicons.dev/icons?i=vite,typescript,solidjs)
+
+## Setup
+
+```
+npm install
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+## Build
 
-## Available Scripts
+```
+npm run build
+```
 
-In the project directory, you can run:
+## Build in watch mode
 
-### `npm run dev`
+```
+npm run dev
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+## license
 
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-Learn more about deploying your application with the [documentations](https://vite.dev/guide/static-deploy.html)
+MIT license
