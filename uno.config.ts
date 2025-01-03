@@ -1,10 +1,15 @@
+import presetIcons from "@unocss/preset-icons";
+import presetUno from "@unocss/preset-uno";
 import { defineConfig } from "unocss";
 
 export default defineConfig({
-  // ...UnoCSS options
-
-  // See https://windicss.org/features/shortcuts.html
-  shortcuts: {
-    // ...your custom shortcuts css here
-  },
+  presets: [
+    presetUno(),
+    presetIcons({
+      extraProperties: {
+        display: "inline-block",
+        "vertical-align": "middle",
+      },
+    }),
+  ],
 });

@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import { crx } from "@crxjs/vite-plugin";
 import { resolve } from "path";
 import solidPlugin from "vite-plugin-solid";
+import UnoCSS from 'unocss/vite';
 
 export default defineConfig(({ mode }: { mode: string }) => {
   switch (mode) {
@@ -29,7 +30,7 @@ export default defineConfig(({ mode }: { mode: string }) => {
 });
 
 // Plugins
-const plugins = [solidPlugin()];
+const plugins = [solidPlugin(), UnoCSS()];
 
 // Alias
 
