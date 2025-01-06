@@ -17,15 +17,15 @@
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^1.0.14",
-    "@iconify/json": "^2.2.291",
+    "@iconify/json": "^2.2.292",
     "@types/chrome": "^0.0.289",
-    "@types/node": "^22.10.4",
+    "@types/node": "^22.10.5",
     "@unocss/preset-icons": "^0.65.3",
     "@unocss/preset-uno": "^0.65.3",
     "add": "^2.0.6",
-    "typescript": "~5.6.2",
+    "typescript": "~5.6.3",
     "unocss": "^0.65.3",
-    "vite": "^6.0.5",
+    "vite": "^6.0.7",
     "vite-plugin-solid": "^2.11.0"
   }
 }
