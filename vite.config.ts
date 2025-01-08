@@ -3,60 +3,64 @@ import { defineConfig } from "vite";
 import { crx } from "@crxjs/vite-plugin";
 import { resolve } from "path";
 import solidPlugin from "vite-plugin-solid";
-import UnoCSS from 'unocss/vite';
+import UnoCSS from "unocss/vite";
 
 export default defineConfig(({ mode }: { mode: string }) => {
   switch (mode) {
     case "development":
-      return { ...config, plugins: [...plugins, crx({ manifest })] };
+      return { ...config(), plugins: [...plugins(), crx({ manifest })] };
     case "production":
-      return config;
+      return config();
 
     case "NewTab":
       return {
-        ...config,
+        ...config(),
         server: {
           open: "src/NewTab/newTab.html",
           host: "localhost",
         },
       };
     case "Options":
-      return { ...config };
+      return { ...config() };
     case "Popup":
-      return { ...config };
+      return { ...config() };
     default:
-      return { ...config };
+      return { ...config() };
   }
 });
 
 // Plugins
-const plugins = [solidPlugin(), UnoCSS()];
+function plugins() {
+  return [solidPlugin(), UnoCSS()];
+}
 
 // Alias
 
 // Default Vite Configuration
-const config = {
-  plugins: plugins,
-  build: {
-    outDir: "dist", // Output directory for the built extension
-    rollupOptions: {
-      input: {
-        popup: resolve(__dirname, "src/Popup/popup.html"),
-        options: resolve(__dirname, "src/Options/options.html"),
-        newTab: resolve(__dirname, "src/NewTab/newTab.html"),
+function config() {
+  return {
+    plugins: plugins(),
+    build: {
+      outDir: "dist", // Output directory for the built extension
+      rollupOptions: {
+        input: {
+          popup: resolve(__dirname, "src/Popup/popup.html"),
+          options: resolve(__dirname, "src/Options/options.html"),
+          newTab: resolve(__dirname, "src/NewTab/newTab.html"),
+        },
+        output: {
+          entryFileNames: "scripts/[name].js",
+          chunkFileNames: "scripts/[name].js",
+          assetFileNames: "assets/[name].[ext]",
+        },
       },
-      output: {
-        entryFileNames: "scripts/[name].js",
-        chunkFileNames: "scripts/[name].js",
-        assetFileNames: "assets/[name].[ext]",
+      emptyOutDir: true,
+    },
+    publicDir: "public",
+    resolve: {
+      alias: {
+        "@": resolve(__dirname, "./src"),
       },
     },
-    emptyOutDir: true,
-  },
-  publicDir: "public",
-  resolve: {
-    alias: {
-      "@": resolve(__dirname, "./src"),
-    },
-  },
-};
+  };
+}
