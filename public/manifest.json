@@ -5,12 +5,6 @@
   "chrome_url_overrides": {
     "newtab": "src/NewTab/newTab.html"
   },
-  "action": {
-    "default_popup": "src/Popup/popup.html"
-  },
-  "options_ui": {
-    "page": "src/Options/options.html"
-  },
   "icons": {
     "16": "assets/icons/16.png",
     "32": "assets/icons/32.png",
