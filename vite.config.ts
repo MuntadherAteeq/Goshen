@@ -60,6 +60,8 @@ function config() {
     resolve: {
       alias: {
         "@": resolve(__dirname, "./src"),
+        "@Assets": resolve(__dirname, "./public/assets"),
+        "@Components": resolve(__dirname, "./src/Components"),
       },
     },
   };

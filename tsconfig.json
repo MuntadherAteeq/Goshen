@@ -24,7 +24,9 @@
     "noUncheckedSideEffectImports": true,
     "types": ["vite/client"],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@Assets/*": ["./public/assets/*"],
+      "@Components/*": ["./src/Components/*"]
     }
   },
   "include": ["src", "src/jsx.d.ts"]

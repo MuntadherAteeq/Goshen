@@ -6,5 +6,9 @@ import "@/global.css";
 render(() => <App />, document.getElementById("root")!);
 
 function App() {
-  return <Background></Background>;
+  return (
+    <Background>
+      <h1>Hello world</h1>
+    </Background>
+  );
 }

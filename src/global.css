@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Inter";
+  src: url("@Assets/fonts/Inter/Inter-latin.woff2") format("woff2"),
+    url("@Assets/fonts/Inter-latin-ext.woff2") format("woff2"),
+    url("@Assets/fonts/Inter-cyrillic.woff2") format("woff2"),
+    url("@Assets/fonts/Inter-cyrillic-ext.woff2") format("woff2"),
+    url("@Assets/fonts/Inter-greek.woff2") format("woff2"),
+    url("@Assets/fonts/Inter-greek-ext.woff2") format("woff2"),
+    url("@Assets/fonts/Inter-vietnamese.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("@Assets/fonts/Manrope/Manrope-latin.woff2") format("woff2"),
+    url("@Assets/fonts/Manrope/Manrope-latin-ext.woff2") format("woff2"),
+    url("@Assets/fonts/Manrope/Manrope-cyrillic.woff2") format("woff2"),
+    url("@Assets/fonts/Manrope/Manrope-greek.woff2") format("woff2");
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +28,9 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+body {
+  font-family: "Inter", sans-serif;
 }
 
 @keyframes fadeLoop {
