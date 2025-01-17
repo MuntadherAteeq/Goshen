@@ -44,3 +44,19 @@ body {
     opacity: 0;
   }
 }
+
+.glass {
+  backdrop-filter: blur(20px) saturate(1.5);
+  background: rgba(21, 27, 30, 0.5);
+  box-shadow: 0 1 3 rgba(0, 0, 0, 0.5);
+  outline-offset: -1px;
+  outline: 1px solid rgba(21, 27, 30, 0.1);
+  z-index: 10;
+}
+.manrope {
+  font-family: "Manrope", sans-serif;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+}
+

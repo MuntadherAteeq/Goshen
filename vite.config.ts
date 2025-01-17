@@ -17,7 +17,6 @@ export default defineConfig(({ mode }: { mode: string }) => {
         ...config(),
         server: {
           open: "src/NewTab/newTab.html",
-          host: "localhost",
         },
       };
     case "Options":

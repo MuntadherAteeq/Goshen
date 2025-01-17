@@ -13,12 +13,14 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "jquery": "^3.7.1",
     "solid-js": "^1.9.3"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^1.0.14",
     "@iconify/json": "^2.2.292",
     "@types/chrome": "^0.0.289",
+    "@types/jquery": "^3.5.32",
     "@types/node": "^22.10.5",
     "@unocss/preset-icons": "^0.65.3",
     "@unocss/preset-uno": "^0.65.3",
