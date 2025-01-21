@@ -1,4 +1,4 @@
-class GDate extends Date {
+export class GDate extends Date {
   private monthNames: string[];
   private dayNames: string[];
   private cachedValues: Record<string, string>;
@@ -12,8 +12,8 @@ class GDate extends Date {
       month: (this.getMonth() + 1).toString().padStart(2, "0"),
       day: this.getDate().toString().padStart(2, "0"),
       dayOfWeek: this.getDay().toString(),
-      hour24: this.getHours().toString().padStart(2, "0"),
-      hour12: (this.getHours() % 12 || 12).toString().padStart(2, "0"),
+      hour24: this.getHours().toString(),
+      hour12: (this.getHours() % 12 || 12).toString(),
       minute: this.getMinutes().toString().padStart(2, "0"),
       second: this.getSeconds().toString().padStart(2, "0"),
       ampm: this.getHours() >= 12 ? "PM" : "AM",
@@ -53,7 +53,7 @@ class GDate extends Date {
       MM: this.cachedValues.month,
       MMM: this.monthNames[this.getMonth()].slice(0, 3),
       MMMM: this.monthNames[this.getMonth()],
-      dd: this.cachedValues.day,
+      DD: this.cachedValues.day,
       DDD: this.dayNames[parseInt(this.cachedValues.dayOfWeek)].slice(0, 3),
       DDDD: this.dayNames[parseInt(this.cachedValues.dayOfWeek)],
       HH: this.cachedValues.hour24,
@@ -66,7 +66,7 @@ class GDate extends Date {
 
     // Replace the tokens in the format string using the map
     return format.replace(
-      /\b(YYYY|YY|MM|MMM|MMMM|dd|DDD|DDDD|HH|hh|mm|ss|A|a)\b/g,
+      /\b(YYYY|YY|MM|MMM|MMMM|DD|DDD|DDDD|HH|hh|mm|ss|A|a)\b/g,
       (match) => {
         return tokenMap[match] || match;
       }
