@@ -33,18 +33,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-@keyframes fadeLoop {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .glass {
   backdrop-filter: blur(20px) saturate(1.5);
   background: rgba(21, 27, 30, 0.5);
@@ -59,4 +47,3 @@ body {
 .inter {
   font-family: "Inter", sans-serif;
 }
-

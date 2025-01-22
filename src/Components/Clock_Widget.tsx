@@ -4,6 +4,8 @@ import { createMemo, createSignal, onCleanup } from "solid-js";
 export const Clock_Widget = () => {
   const [time, setTime] = createSignal(new GDate());
 
+  $();
+
   const interval = setInterval(() => {
     setTime(new GDate());
   }, 1000);
@@ -19,7 +21,7 @@ export const Clock_Widget = () => {
 
   const formattedDate = createMemo(() => {
     const date = time();
-    return date.formatDate("DDDD, MMMM DD");
+    return date.formatDate("DDD, MMM DD");
   });
 
   return (

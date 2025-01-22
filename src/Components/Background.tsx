@@ -11,39 +11,13 @@ export default function Background(props: any) {
 }
 
 export const VideoWallpaper = (props: any) => {
-  const [show, setShow] = createSignal(false);
+  function HandleAnimation(event: Event) {
+    const video = event.currentTarget as HTMLVideoElement;
+    if (false) {
+      
+    }
+  }
 
-  const handlePlay = (
-    e: Event & {
-      currentTarget: HTMLVideoElement;
-    }
-  ) => {
-    if (
-      e.currentTarget.currentTime >= Math.ceil(e.currentTarget.duration / 2)
-    ) {
-      setShow(true);
-    }
-  };
-  const HandleVideoLoaded = (
-    e: Event & {
-      currentTarget: HTMLVideoElement;
-    }
-  ) => {
-    e.currentTarget.style.animation = `fadeLoop ${e.currentTarget.duration}s infinite`;
-  };
-
-  const HandleVideoTimeUpdate = (
-    e: Event & {
-      currentTarget: HTMLVideoElement;
-    }
-  ) => {
-    let Video = e.currentTarget;
-    if (Video.currentTime >= Math.ceil(Video.duration / 2)) {
-      Video.style.display = "block";
-    } else {
-      Video.style.display = "hidden";
-    }
-  };
   return (
     <div class=" pos-absolute grid place-items-center h-64 w-full h-full ">
       <video
@@ -53,22 +27,18 @@ export const VideoWallpaper = (props: any) => {
         controls={false}
         src={props.src}
         disablepictureinpicture
-        class="col-start-1 row-start-1 w-full h-full object-cover"
-        onTimeUpdate={handlePlay}
+        class=" animate-fade-in col-start-1 row-start-1 w-full h-full object-cover"
       />
-      <Show when={show()}>
-        <video
-          autoplay
-          loop
-          muted
-          controls={false}
-          src={props.src}
-          disablepictureinpicture
-          class=" col-start-1 row-start-1 w-full h-full  object-cover "
-          onloadedmetadata={HandleVideoLoaded}
-          onTimeUpdate={HandleVideoTimeUpdate}
-        />
-      </Show>
+      <video
+        autoplay
+        loop
+        muted
+        controls={false}
+        src={props.src}
+        disablepictureinpicture
+        class=" col-start-1 row-start-1 w-full h-full  object-cover opacity-0 animate-fade-in animate-forwards "
+        onTimeUpdate={HandleAnimation}
+      />
     </div>
   );
 };
