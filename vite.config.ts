@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 import { crx } from "@crxjs/vite-plugin";
 import { resolve } from "path";
 import solidPlugin from "vite-plugin-solid";
-import UnoCSS from "unocss/vite";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ mode }: { mode: string }) => {
   switch (mode) {
@@ -16,7 +16,7 @@ export default defineConfig(({ mode }: { mode: string }) => {
       return {
         ...config(),
         server: {
-          open: "src/NewTab/newTab.html",
+          open: "src/Pages/NewTab/newTab.html",
         },
       };
     case "Options":
@@ -30,7 +30,7 @@ export default defineConfig(({ mode }: { mode: string }) => {
 
 // Plugins
 function plugins() {
-  return [solidPlugin(), UnoCSS()];
+  return [solidPlugin(), tailwindcss()];
 }
 
 // Alias

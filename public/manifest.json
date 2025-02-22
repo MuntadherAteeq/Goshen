@@ -3,7 +3,7 @@
   "name": "Goshen",
   "version": "0.1.0",
   "chrome_url_overrides": {
-    "newtab": "src/NewTab/newTab.html"
+    "newtab": "src/Pages/NewTab/newTab.html"
   },
   "icons": {
     "16": "assets/icons/16.png",

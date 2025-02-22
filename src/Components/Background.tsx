@@ -1,11 +1,10 @@
-import { createSignal, Show } from "solid-js";
 import wallpaper from "@Assets/10070-fhd.mp4";
 
 export default function Background(props: any) {
   return (
-    <div class="animate-fade-in  pos-relative bg-gray-8 w-screen h-screen overflow-hidden">
+    <div class="relative bg-gray-8 w-screen h-screen overflow-hidden ">
       <VideoWallpaper src={wallpaper} />
-      <div class=" pos-absolute h-full w-full">{props.children}</div>
+      <div class=" absolute h-full w-full">{props.children}</div>
     </div>
   );
 }
@@ -14,12 +13,11 @@ export const VideoWallpaper = (props: any) => {
   function HandleAnimation(event: Event) {
     const video = event.currentTarget as HTMLVideoElement;
     if (false) {
-      
     }
   }
 
   return (
-    <div class=" pos-absolute grid place-items-center h-64 w-full h-full ">
+    <div class=" absolute grid place-items-center h-64 w-full h-full">
       <video
         autoplay
         loop
